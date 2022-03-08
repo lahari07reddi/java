@@ -3,7 +3,7 @@ package com.training.cg;
 public class AccountType implements Account {
 	double InitialBalance;
 	double TotalBalance;
-	int rateofinterest;
+	double AccountNumber;
 	
 
 	@Override
@@ -28,6 +28,12 @@ public class AccountType implements Account {
 	public double checkBalance() {
 		// TODO Auto-generated method stub
 		return TotalBalance;
+	}
+
+	@Override
+	public double getInterest(double timeperiod,double rateofinterest) {
+		 double SI=(TotalBalance*(rateofinterest)*timeperiod)/100;
+		return SI;
 	}
 	
 }
